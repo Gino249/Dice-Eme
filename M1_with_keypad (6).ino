@@ -34,7 +34,7 @@ const unsigned long MOTOR_RUN_TIME = 3000; // ms the motor spins on a win
 
 // ---------------- Punishments ----------------
 const char* punishments[] = {"Sing", "Dance", "Dare", "Truth"};
-const int NUM_PUNISHMENTS = 4;
+const int NUM_PUNISHMENTS = sizeof(punishments) / sizeof(punishments[0]);
 
 void runMotor(unsigned long durationMs) {
   digitalWrite(IN1, HIGH);
@@ -234,7 +234,7 @@ void showLose() {
   lcd.setCursor(0, 0);
   lcd.print(F("You lose!"));
   lcd.setCursor(0, 1);
-  lcd.print(F("Start punishment"));
+  lcd.print(F("Loading punishment..."));
   delay(2500);
 
   int choice = random(0, NUM_PUNISHMENTS);
@@ -244,7 +244,7 @@ void showLose() {
   lcd.print(F("Punishment:"));
   lcd.setCursor(0, 1);
   lcd.print(punishments[choice]);
-  delay(3000);
+  delay(7000);
 
   lcd.clear();
   lcd.setCursor(0, 0);
