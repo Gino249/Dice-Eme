@@ -233,9 +233,15 @@ void showLose() {
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print(F("You lose!"));
+  delay(1500);
+
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print(F("Loading"));
   lcd.setCursor(0, 1);
-  lcd.print(F("Loading punishment..."));
-  delay(2500);
+  lcd.print(F("punishment...")); // fits perfectly on line 2
+  delay(2000);
+
 
   int choice = random(0, NUM_PUNISHMENTS);
 
