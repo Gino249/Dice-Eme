@@ -61,3 +61,5 @@ Motor side:
 - Keypad, LCD, button, and buzzer all run fine off the Arduino's 5V/GND.
 
 Pins **not used** in this build (free for anything else): 0, 1 (Serial — leave alone if you use Serial Monitor), A1, A2, A3.
+
+![ScreenShot by Gino, Chariz](Screenshot_2026-08-15-09-59-30-32_40deb401b9ffe8e1df2f1cc5ba480b12.jpg)
